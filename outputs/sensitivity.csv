@@ -1,0 +1,5 @@
+scenario,baseline_members,proposed_members,expected_gain_pct
+Base,1558.9,1631.03,4.63
+Social response -20%,1464.35,1500.4,2.46
+Search response -20%,1468.03,1535.66,4.61
+Affiliate response -20%,1474.82,1550.9,5.16

@@ -1,0 +1,5 @@
+channel,calibration_points,min_observed_spend,max_observed_spend,incremental_members,spend_usd,pooled_incremental_cac
+Affiliate,16,4000,18000,6580.77,176000,26.7445906785984
+Display,16,4000,18000,3502.49,176000,50.2499650248823
+Search,16,4000,18000,7197.44,176000,24.453138893828918
+Social,16,4000,18000,7779.25,176000,22.6242889738728

@@ -1,0 +1,5 @@
+channel,baseline_spend_usd,recommended_spend_usd,change_usd,expected_incremental_members,marginal_members_per_1000
+Search,10000,11000,1000,476.85,19.99
+Social,10000,16000,6000,653.15,24.64
+Display,10000,4000,-6000,100.34,21.46
+Affiliate,10000,9000,-1000,400.68,19.75

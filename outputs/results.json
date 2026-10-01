@@ -1,0 +1,166 @@
+{
+  "title": "Marketing Investment & Budget Allocation",
+  "metrics": {
+    "Weekly budget": "$40,000",
+    "Modeled member gain": "4.6%",
+    "Allocation step": "$1,000",
+    "Holdout points": 16
+  },
+  "tables": [
+    {
+      "name": "Budget recommendation",
+      "rows": [
+        {
+          "channel": "Search",
+          "baseline_spend_usd": 10000,
+          "recommended_spend_usd": 11000,
+          "change_usd": 1000,
+          "expected_incremental_members": 476.85,
+          "marginal_members_per_1000": 19.99
+        },
+        {
+          "channel": "Social",
+          "baseline_spend_usd": 10000,
+          "recommended_spend_usd": 16000,
+          "change_usd": 6000,
+          "expected_incremental_members": 653.15,
+          "marginal_members_per_1000": 24.64
+        },
+        {
+          "channel": "Display",
+          "baseline_spend_usd": 10000,
+          "recommended_spend_usd": 4000,
+          "change_usd": -6000,
+          "expected_incremental_members": 100.34,
+          "marginal_members_per_1000": 21.46
+        },
+        {
+          "channel": "Affiliate",
+          "baseline_spend_usd": 10000,
+          "recommended_spend_usd": 9000,
+          "change_usd": -1000,
+          "expected_incremental_members": 400.68,
+          "marginal_members_per_1000": 19.75
+        }
+      ],
+      "category": "channel",
+      "value": "recommended_spend_usd",
+      "unit": ""
+    },
+    {
+      "name": "Held-out model checks",
+      "rows": [
+        {
+          "channel": "Search",
+          "saturation_members": 656.95,
+          "scale_spend_usd": 8500,
+          "holdout_mae_members": 8.46
+        },
+        {
+          "channel": "Social",
+          "saturation_members": 1109.13,
+          "scale_spend_usd": 18000,
+          "holdout_mae_members": 5.79
+        },
+        {
+          "channel": "Display",
+          "saturation_members": 459.87,
+          "scale_spend_usd": 16250,
+          "holdout_mae_members": 10.06
+        },
+        {
+          "channel": "Affiliate",
+          "saturation_members": 544.11,
+          "scale_spend_usd": 6750,
+          "holdout_mae_members": 6.38
+        }
+      ],
+      "category": "channel",
+      "value": "holdout_mae_members",
+      "unit": ""
+    },
+    {
+      "name": "Sensitivity scenarios",
+      "rows": [
+        {
+          "scenario": "Base",
+          "baseline_members": 1558.9,
+          "proposed_members": 1631.03,
+          "expected_gain_pct": 4.63
+        },
+        {
+          "scenario": "Social response -20%",
+          "baseline_members": 1464.35,
+          "proposed_members": 1500.4,
+          "expected_gain_pct": 2.46
+        },
+        {
+          "scenario": "Search response -20%",
+          "baseline_members": 1468.03,
+          "proposed_members": 1535.66,
+          "expected_gain_pct": 4.61
+        },
+        {
+          "scenario": "Affiliate response -20%",
+          "baseline_members": 1474.82,
+          "proposed_members": 1550.9,
+          "expected_gain_pct": 5.16
+        }
+      ],
+      "category": "scenario",
+      "value": "expected_gain_pct",
+      "unit": ""
+    },
+    {
+      "name": "Calibration evidence",
+      "rows": [
+        {
+          "channel": "Affiliate",
+          "calibration_points": 16,
+          "min_observed_spend": 4000,
+          "max_observed_spend": 18000,
+          "incremental_members": 6580.77,
+          "spend_usd": 176000,
+          "pooled_incremental_cac": 26.7445906785984
+        },
+        {
+          "channel": "Display",
+          "calibration_points": 16,
+          "min_observed_spend": 4000,
+          "max_observed_spend": 18000,
+          "incremental_members": 3502.49,
+          "spend_usd": 176000,
+          "pooled_incremental_cac": 50.2499650248823
+        },
+        {
+          "channel": "Search",
+          "calibration_points": 16,
+          "min_observed_spend": 4000,
+          "max_observed_spend": 18000,
+          "incremental_members": 7197.44,
+          "spend_usd": 176000,
+          "pooled_incremental_cac": 24.453138893828918
+        },
+        {
+          "channel": "Social",
+          "calibration_points": 16,
+          "min_observed_spend": 4000,
+          "max_observed_spend": 18000,
+          "incremental_members": 7779.25,
+          "spend_usd": 176000,
+          "pooled_incremental_cac": 22.6242889738728
+        }
+      ],
+      "category": "channel",
+      "value": "pooled_incremental_cac",
+      "unit": ""
+    }
+  ],
+  "findings": [
+    "The model projects 4.6% more incremental members than an equal $10,000-per-channel allocation at the same total spend. This is a scenario estimate, not an achieved improvement.",
+    "Respect $4,000 channel floors and $16,000 caps; saturation prevents allocating everything to the channel with the lowest historical average CAC.",
+    "Under the modeled response shocks, gains range from 2.46% to 5.16%. Approve a small, measured reallocation before scaling.",
+    "Ask Growth Marketing to confirm inventory limits, Finance to confirm spend ceilings, and the measurement owner to supply real incrementality calibrations."
+  ],
+  "caveat": "Response curves are fitted to synthetic calibration points representing hypothetical experiments. There are 12 training and 4 held-out points per channel. Noise is deliberately mild; real-world confounding, seasonality, overlap, and interaction effects are absent. Results assume independent channel responses and stable curves. Sensitivity cases are stress tests, not confidence intervals. Exact optimum applies only to the stated discrete grid. No advertising money was spent."
+}
